@@ -3,10 +3,10 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-int main(int argc, char *argv) {
+int main(int argc, char **argv) {
     int forkCheck;
     int pfd[2];
-    charbuffer[2048];
+    char buffer[2048];
     int bytes;
     int fd;
 
