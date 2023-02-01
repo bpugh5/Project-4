@@ -10,9 +10,10 @@ int main(int argc, char **argv) {
     int bytes;
     int fd;
 
-    if (argc <= 1) {
-        perror("invalid usage");
-        exit(1);
+    if (argc <= 2) {
+        printf("Not enough arguments, please try again! :)\n"
+        "Usage: redirout  outfilename  command opt1 opt2 ...\n");
+        return 1;
     }
 
     fd = open(argv[1], O_RDWR|O_CREAT|O_TRUNC, 0644);
